@@ -1,0 +1,70 @@
+<html>
+   <head>
+      <script>
+
+
+function Classification(Name){
+  this.name=Name;
+  this.description="";
+  this.classes=();
+  this.classColumns=3;
+  this.classLayers=1;
+  
+  this.addDescription=function(Description){
+    this.description=Description
+  }
+  
+  this.addClass=function(cls){
+    this.classes.push(cls)
+    
+    
+    
+  }
+  
+  this.display(){
+    
+    
+  }
+  
+  this.drawInto(el){
+    if (typeof el == "string") el=document.getElementById(el);
+    el.innerHTML="";
+    
+    var div=document.createElement("div");
+    div.style="margin:auto;width:30em"
+    var table=document.createElement("table");
+    var titleRow=document.createElement("tr");
+    var titleCell=document.createElement("th");
+    var titleCell.innerHTML=this.name;
+    var descRow=document.createElement("tr");
+    var descCell=document.createElement("td");
+    var descCell.innerHTML=this.description;
+    table.appendChild(titleRow);
+    table.appendChild(descRow);
+    for (var c=0;c<this.classes.length;c++){
+      table.appendChild(this.classes[c].draw())
+    }
+    div.appendChild("table");
+    el.appendChild(div);
+  }
+  
+  this.save(){
+    
+    
+  }
+}
+
+function Class(clsName,){
+  
+  
+  
+}
+
+      </script>
+   </head>
+<body>
+
+  
+
+</body>
+</html>
